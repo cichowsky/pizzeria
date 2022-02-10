@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Template from 'components/templates/Template';
 import styled from 'styled-components';
 
 interface IHeadingProps {
@@ -13,7 +14,7 @@ const Heading = styled.h1<IHeadingProps>`
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <Template>
       <Head>
         <title>Create Next App</title>
         <meta name="description" content="The best pizza in town!" />
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Heading isSmall>Hello world</Heading>
-    </div>
+    </Template>
   );
 };
 

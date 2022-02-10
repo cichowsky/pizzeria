@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --headerHeight: ${({ theme }) => theme.header.heightSmall}
+  }
+
   *, *::before, *::after {
     box-sizing: border-box;
   }
