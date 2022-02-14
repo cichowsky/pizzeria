@@ -5,6 +5,8 @@ const theme: DefaultTheme = {
     text: '#111111',
     primary: '#d3401f',
     background: '#efefef',
+    headerText: '#f1f1f1',
+    headerBackground: '#d3401f',
   },
   layout: {
     maxWidth: '1280px',

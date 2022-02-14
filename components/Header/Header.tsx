@@ -1,4 +1,4 @@
-import CartIcon from 'public/icons/shopping_cart.svg';
+import Cart from 'components/Cart/Cart';
 import { SWrapper, SInner } from './Header.styles';
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
       <SInner>
         <div>logo</div>
         <div>navigation</div> {/* mobile - hamburger, desktop links */}
-        <CartIcon />
+        <Cart />
       </SInner>
     </SWrapper>
   );

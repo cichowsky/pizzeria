@@ -7,6 +7,8 @@ declare module 'styled-components' {
       text: string;
       primary: string;
       background: string;
+      headerText: string;
+      headerBackground: string;
     };
     layout: {
       maxWidth: string;
