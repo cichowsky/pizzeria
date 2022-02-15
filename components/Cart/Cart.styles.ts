@@ -1,26 +1,12 @@
 import styled from 'styled-components';
+import SButtonIcon from 'components/UI/ButtonIcon/ButtonIcon';
 
-export const SCartButton = styled.button`
+export const SCartButton = styled(SButtonIcon)`
   flex-shrink: 0;
-
-  width: 3rem;
-  height: 3rem;
   position: relative;
-
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 0;
-  color: inherit;
-  background: none;
-  border: none;
-
-  cursor: pointer;
 
   & > svg {
     max-width: 1.75rem;
-    fill: currentColor;
   }
 `;
 

@@ -17,6 +17,7 @@ export const SInner = styled.div`
   max-width: ${({ theme }) => theme.layout.maxWidth};
   display: flex;
   justify-content: space-between;
+  gap: ${({ theme }) => theme.layout.padding};
   align-items: center;
   padding: 0 ${({ theme }) => theme.layout.padding};
   margin: 0 auto;
