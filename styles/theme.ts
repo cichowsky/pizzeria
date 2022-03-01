@@ -12,10 +12,6 @@ const theme: DefaultTheme = {
     maxWidth: '1280px',
     padding: '1rem',
   },
-  header: {
-    heightSmall: '50px',
-    heightBig: '100px',
-  },
   boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
 };
 

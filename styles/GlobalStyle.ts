@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    --headerHeight: ${({ theme }) => theme.header.heightSmall}
-  }
-
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -24,6 +20,21 @@ const GlobalStyle = createGlobalStyle`
 
   button, a {
     cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
   }
 `;
 

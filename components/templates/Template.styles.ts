@@ -1,16 +1,13 @@
 import styled from 'styled-components';
+import { header } from 'styles/constants';
 
 export const SWrapper = styled.div`
-  padding-top: var(--headerHeight);
+  padding-top: ${header.height};
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.background};
-
-  @media (min-width: 640px) {
-    --headerHeight: ${({ theme }) => theme.header.heightBig};
-  }
 `;
 
 export const SContent = styled.main`

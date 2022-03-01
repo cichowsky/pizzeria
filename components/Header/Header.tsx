@@ -1,15 +1,20 @@
 import Cart from 'components/Cart/Cart';
-import HamburgerButton from 'components/HamburgerButton/HamburgerButton';
-import { SWrapper, SInner } from './Header.styles';
+import Navigation from 'components/Navigation/Navigation';
+import Link from 'next/link';
+import { SWrapper, SInner, SGroup } from './Header.styles';
 
 const Header = () => {
   return (
     <SWrapper>
       <SInner>
-        <HamburgerButton />
-        <div>logo</div>
-        {/* <div>navigation</div> mobile - hamburger, desktop links */}
-        <Cart />
+        <Navigation />
+
+        <SGroup>
+          <Cart />
+          <Link href="/auth">
+            <a>Log in / Sign up</a>
+          </Link>
+        </SGroup>
       </SInner>
     </SWrapper>
   );

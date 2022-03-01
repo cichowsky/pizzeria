@@ -14,10 +14,6 @@ declare module 'styled-components' {
       maxWidth: string;
       padding: string;
     };
-    header: {
-      heightSmall: string;
-      heightBig: string;
-    };
     boxShadow: string;
   }
 }

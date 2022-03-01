@@ -1,15 +1,22 @@
-import { useState } from 'react';
 import SButtonIcon from 'components/UI/ButtonIcon/ButtonIcon';
 import { SHamburger } from './HamburgerButton.styles';
 
-const HamburgerButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface IHamburgerButtonProps {
+  isOpen: boolean;
+  onClick: () => void;
+  ariaControls: string;
+}
 
-  const handleClick = () => setIsOpen(!isOpen);
-
+const HamburgerButton = ({ isOpen, onClick, ariaControls }: IHamburgerButtonProps) => {
   return (
-    <SButtonIcon type="button" onClick={handleClick}>
-      <SHamburger isActive={isOpen}>
+    <SButtonIcon
+      type="button"
+      onClick={onClick}
+      aria-label={isOpen ? 'Close the menu' : 'Open the menu'}
+      aria-expanded={!!isOpen}
+      aria-controls={ariaControls}
+    >
+      <SHamburger isActive={isOpen} aria-hidden>
         <span />
         <span />
         <span />
