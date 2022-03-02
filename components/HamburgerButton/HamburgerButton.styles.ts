@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
+import SButtonIcon from 'components/UI/ButtonIcon/ButtonIcon';
 import { hamburger } from 'styles/constants';
+
+export const SHamburgerButton = styled(SButtonIcon)``;
 
 interface ISHamburgerProps {
   readonly isActive: boolean;

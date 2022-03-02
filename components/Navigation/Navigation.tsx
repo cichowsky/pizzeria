@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import useDetectOutsideClick from 'hooks/useDetectOutsideClick';
 import HamburgerButton from 'components/HamburgerButton/HamburgerButton';
-import { SNavLinks } from './Navigation.styles';
+import { SNav, SNavLinks } from './Navigation.styles';
 
 const navLinks = [
   { path: '/', label: 'Home', id: 1 },
@@ -16,7 +16,7 @@ const Navigation = () => {
   useDetectOutsideClick(navRef, () => setIsMenuOpen(false));
 
   return (
-    <nav role="navigation" aria-label="Main menu" ref={navRef}>
+    <SNav role="navigation" aria-label="Main menu" ref={navRef}>
       <HamburgerButton
         isOpen={isMenuOpen}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -32,7 +32,7 @@ const Navigation = () => {
           </li>
         ))}
       </SNavLinks>
-    </nav>
+    </SNav>
   );
 };
 

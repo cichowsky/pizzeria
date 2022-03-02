@@ -1,5 +1,4 @@
-import SButtonIcon from 'components/UI/ButtonIcon/ButtonIcon';
-import { SHamburger } from './HamburgerButton.styles';
+import { SHamburgerButton, SHamburger } from './HamburgerButton.styles';
 
 interface IHamburgerButtonProps {
   isOpen: boolean;
@@ -9,7 +8,7 @@ interface IHamburgerButtonProps {
 
 const HamburgerButton = ({ isOpen, onClick, ariaControls }: IHamburgerButtonProps) => {
   return (
-    <SButtonIcon
+    <SHamburgerButton
       type="button"
       onClick={onClick}
       aria-label={isOpen ? 'Close the menu' : 'Open the menu'}
@@ -21,7 +20,7 @@ const HamburgerButton = ({ isOpen, onClick, ariaControls }: IHamburgerButtonProp
         <span />
         <span />
       </SHamburger>
-    </SButtonIcon>
+    </SHamburgerButton>
   );
 };
 

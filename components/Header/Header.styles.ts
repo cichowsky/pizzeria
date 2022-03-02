@@ -10,6 +10,7 @@ export const SWrapper = styled.header`
   color: ${({ theme }) => theme.colors.headerText};
   background-color: ${({ theme }) => theme.colors.headerBackground};
   box-shadow: ${({ theme }) => theme.boxShadow};
+  border-bottom: 1px solid;
   z-index: 50;
 `;
 
