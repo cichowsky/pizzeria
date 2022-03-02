@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
+import useDetectOutsideClick from 'hooks/useDetectOutsideClick';
 import HamburgerButton from 'components/HamburgerButton/HamburgerButton';
 import { SNavLinks } from './Navigation.styles';
 
@@ -11,11 +12,16 @@ const navLinks = [
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const handleClick = () => setIsMenuOpen(!isMenuOpen);
+  const navRef = useRef(null);
+  useDetectOutsideClick(navRef, () => setIsMenuOpen(false));
 
   return (
-    <nav role="navigation" aria-label="Main menu">
-      <HamburgerButton isOpen={isMenuOpen} onClick={handleClick} ariaControls="main-menu" />
+    <nav role="navigation" aria-label="Main menu" ref={navRef}>
+      <HamburgerButton
+        isOpen={isMenuOpen}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        ariaControls="main-menu"
+      />
 
       <SNavLinks isOpen={isMenuOpen} id="main-menu">
         {navLinks.map((link) => (
