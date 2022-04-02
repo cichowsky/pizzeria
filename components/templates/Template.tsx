@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 import { SWrapper, SContent } from './Template.styles';
 
 interface ITemplateProps {
@@ -11,6 +12,7 @@ const Template = ({ children }: ITemplateProps) => {
     <SWrapper>
       <Header />
       <SContent>{children}</SContent>
+      <Footer />
     </SWrapper>
   );
 };

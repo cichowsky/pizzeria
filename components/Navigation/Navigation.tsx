@@ -6,7 +6,7 @@ import { SNav, SNavLinks } from './Navigation.styles';
 
 const navLinks = [
   { path: '/', label: 'Home', id: 1 },
-  { path: '/order', label: 'Order', id: 2 },
+  { path: '/about-us', label: 'About us', id: 2 },
   { path: '/contact', label: 'Contact', id: 3 },
 ];
 
