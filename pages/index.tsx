@@ -8,8 +8,7 @@ interface IHeadingProps {
 }
 
 const Heading = styled.h1<IHeadingProps>`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: ${({ isSmall }) => (isSmall ? '1.25rem' : '2rem')};
+  font-size: ${({ theme, isSmall }) => (isSmall ? theme.font.size.xl : theme.font.size.xxl)};
 `;
 
 const Home: NextPage = () => {

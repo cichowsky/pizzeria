@@ -7,11 +7,16 @@ export const SWrapper = styled.header`
   left: 0;
   right: 0;
   height: ${header.height};
-  color: ${({ theme }) => theme.colors.headerText};
-  background-color: ${({ theme }) => theme.colors.headerBackground};
-  box-shadow: ${({ theme }) => theme.boxShadow};
-  border-bottom: 1px solid;
+  color: ${({ theme }) => theme.font.color.header};
+  background: ${({ theme: { background } }) =>
+    `linear-gradient(145deg, ${background.header} 0%, ${background.header2} 100%)`};
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 50;
+
+  a:hover,
+  button:hover {
+    color: ${({ theme }) => theme.font.color.headerHover};
+  }
 `;
 
 export const SInner = styled.div`

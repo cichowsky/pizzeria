@@ -3,19 +3,20 @@ import styled from 'styled-components';
 export const SFooter = styled.footer`
   display: flex;
 
-  background: linear-gradient(145deg, #111 0%, #222 100%);
-  color: lightgray;
+  background: ${({ theme: { background } }) =>
+    `linear-gradient(145deg, ${background.footer} 0%, ${background.footer2} 100%)`};
+  color: ${({ theme }) => theme.font.color.footer};
 
-  @media (min-width: 1024px) {
+  ${({ theme }) => theme.mq.desktop} {
     min-height: 420px;
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.font.size.m};
   }
 `;
 
 export const SImageContainer = styled.div`
   display: none;
 
-  @media (min-width: 1024px) {
+  ${({ theme }) => theme.mq.desktop} {
     position: relative;
     display: block;
     flex: 1;
@@ -29,25 +30,26 @@ export const STextContainer = styled.div`
 
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding: 3rem;
+  gap: 3.2rem;
+  padding: 4.8rem;
 
-  @media (min-width: 1024px) {
-    gap: 2rem 4rem;
+  ${({ theme }) => theme.mq.desktop} {
+    gap: 3.2rem 6.4rem;
   }
 `;
 
 export const SMotto = styled.h2`
   text-transform: uppercase;
   width: 100%;
+  margin-bottom: 0;
 
-  @media (min-width: 1024px) {
-    font-size: 36px;
+  ${({ theme }) => theme.mq.desktop} {
+    font-size: ${({ theme }) => theme.font.size.xxxl};
   }
 `;
 
 export const SHeading = styled.h3`
-  color: #b7903c;
+  color: ${({ theme }) => theme.font.color.footerHeader};
   text-transform: uppercase;
 `;
 

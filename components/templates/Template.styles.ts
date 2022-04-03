@@ -7,7 +7,7 @@ export const SWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.background.body};
 `;
 
 export const SContent = styled.main`

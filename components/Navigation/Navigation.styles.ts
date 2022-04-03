@@ -3,7 +3,7 @@ import { header } from 'styles/constants';
 import { SHamburgerButton } from 'components/HamburgerButton/HamburgerButton.styles';
 
 export const SNavLinks = styled.ul<{ isOpen: boolean }>`
-  @media (max-width: 640px) {
+  ${({ theme }) => theme.mq.mobile} {
     position: fixed;
     top: ${header.height};
     bottom: 0;
@@ -12,8 +12,9 @@ export const SNavLinks = styled.ul<{ isOpen: boolean }>`
 
     flex-direction: column;
     padding: ${({ theme }) => theme.layout.padding} calc(2 * ${({ theme }) => theme.layout.padding});
-    font-size: 1.125rem;
-    background-color: ${({ theme }) => theme.colors.headerBackground};
+    font-size: ${({ theme }) => theme.font.size.m};
+    background: ${({ theme: { background } }) =>
+      `linear-gradient(145deg, ${background.header} 0%, ${background.header2} 100%)`};
     transition: transform 0.2s, visibility 0.2s;
     visibility: ${({ isOpen }) => !isOpen && 'hidden'};
   }
@@ -23,7 +24,7 @@ export const SNavLinks = styled.ul<{ isOpen: boolean }>`
 `;
 
 export const SNav = styled.nav`
-  @media (min-width: 641px) {
+  ${({ theme }) => theme.mq.tablet} {
     ${SHamburgerButton} {
       display: none;
     }

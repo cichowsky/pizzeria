@@ -1,6 +1,6 @@
 export const hamburger = {
-  width: '2rem',
-  height: '1.25rem',
+  width: '3.2rem',
+  height: '2rem',
   barThickness: '3px',
 };
 

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const SButtonIcon = styled.button`
-  width: 3rem;
-  height: 3rem;
+  width: 4.8rem;
+  height: 4.8rem;
 
   display: inline-flex;
   justify-content: center;

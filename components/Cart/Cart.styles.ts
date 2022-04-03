@@ -6,24 +6,28 @@ export const SCartButton = styled(SButtonIcon)`
   position: relative;
 
   & > svg {
-    max-width: 1.75rem;
+    max-width: 2.8rem;
   }
 `;
 
 export const SAmount = styled.span`
   position: absolute;
-  top: 0.25rem;
-  left: 1.625rem;
+  top: 0.4rem;
+  left: 2.6rem;
 
-  min-width: 1rem;
-  min-height: 1rem;
-  padding: 1px 4px;
+  min-width: 1.6rem;
+  min-height: 1.6rem;
+  padding: 0.1rem 0.4rem;
 
   line-height: 1;
   font-weight: 700;
 
-  color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.headerText};
-  box-shadow: 0 0 0.125rem 0.125rem ${({ theme }) => theme.colors.headerBackground};
+  color: ${({ theme }) => theme.font.color.text};
+  background-color: ${({ theme }) => theme.font.color.header};
+  box-shadow: 0 0 0.2rem 0.2rem ${({ theme }) => theme.background.header};
   border-radius: 9999px;
+
+  ${SCartButton}:hover & {
+    background-color: ${({ theme }) => theme.font.color.headerHover};
+  }
 `;
